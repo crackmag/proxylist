@@ -23,12 +23,12 @@ jobs:
         python-version: "3.10"
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip 
+        python -m pip install --upgrade pip
+        pip install git -y
     - name: setup env & install getproxy
       run: |
         git config --global user.name "crackmag"
         git config --global user.email "valya.spaces@gmail.com"
-        pip install --upgrade pip -y
         pip install git+https://github.com/fate0/getproxy.git@master
     - name: run getproxy
       run: |
